@@ -152,3 +152,57 @@ body {
 }
 
 /* Fin de Menú lateral */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+	margin-top: 120px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.main-title {
+    text-align: center;
+    color: #4CAF50;
+}
+
+.subtitle {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.product-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.product-image img {
+    width: 600px; /* Ancho deseado */
+    height: 400px; /* Alto deseado */
+    object-fit: cover; /* Para mantener la proporción y cubrir el contenedor */
+    border-radius: 8px; /* Opcional: agregar borde redondeado */
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.6;
+   padding: 10px;
+	
+}

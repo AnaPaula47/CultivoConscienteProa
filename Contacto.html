@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros</title>
-    <link rel="stylesheet" href="Nosotros.css">
-    <link rel="icon" href="logo/campo.ico">
+    <link rel="stylesheet" href="Contacto.css">
+    <title>Contacto</title>
 </head>
 <body>
     <header class="header">
@@ -37,19 +36,18 @@
             </nav>
             <label for="btn-menu">✖️</label>
         </div>
-    </div>   
-    <div class="about-section">
-        <div class="inner-container">
-            <h1>Nosotros</h1>
-            <p class="text">
-                Nosotros somos una empresa dedicada a la agricultura sostenible, comprometida con el medio ambiente y la producción de alimentos saludables. Nuestro equipo está formado por profesionales apasionados por la tierra y el cultivo responsable. Trabajamos día a día para innovar en técnicas agrícolas que respeten la naturaleza y garanticen productos de la más alta calidad
-            </p>
-            <div class="skills">
-                <span>Agricultura</span>
-                <span>Huerta</span>
-                <span>Plantacion</span>
+    </div>  
+    </header>
+    <main>
+        <form class="form" action="https://formspree.io/f/moqgkawq" method="POST">
+            <div class="form_container">
+              <h2 class="form_title">Contactanos</h2>
+              <input type="text" class="form_input" placeholder="Nombre" name="name"/>
+              <input type="Email" class="form_input" placeholder="Email" name="email">
+              <textarea class="form_input form_input--message" placeholder="Mensaje" name="message"></textarea>
+              <input type="submit" value="Enviar" class="form_cta" />
             </div>
-        </div>
-    </div>
+          </form>
+    </main>
 </body>
 </html>
