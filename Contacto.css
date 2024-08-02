@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
 	*{
 		margin: 0;
@@ -26,6 +27,14 @@
 		background-color: #035718;
 		top: 0;left: 0;
 	}
+	
+	.logo img {
+		color: #000000;
+		align-items: center;
+		font-weight: 400;
+		font-size: 22px;
+		margin-left: 10px;
+	}
 	.container{
 		
 		width: 95%;
@@ -38,26 +47,23 @@
 		line-height:100px;
 		
 	}
-	.container .btn-menu label{
-		color: #000000;
+	.container .btn-menu label {
+		color: #ffffff;
 		font-size: 25px;
 		cursor: pointer;
 	}
-	.logo {
-		padding: 0px;
-		margin-bottom: 1px;
-	}
-	
-	.container .menu{
+
+	.container .menu {
 		float: right;
 		line-height: 100px;
 	}
-	.container .menu a{
+	
+	.container .menu a {
 		display: inline-block;
 		padding: 15px;
 		line-height: normal;
 		text-decoration: none;
-		color: #000000;
+		color: #ffffff;
 		transition: all 0.3s ease;
 		border-bottom: 2px solid transparent;
 		font-size: 15px;
@@ -68,112 +74,353 @@
 		padding-bottom: 5px;
 	}
 	/*Fin de Estilos para el encabezado*/
+	
+/* Estilos para el menú lateral */
+#btn-menu {
+    display: none;
+}
 
-	/*Menù lateral*/
-	#btn-menu{
-		display: none;
-	}
-	.container-menu{
-		position: absolute;
-		background: rgba(0,0,0,0.5);
-		width: 100%;
-		height: 100vh;
-		top: 0;left: 0;
-		transition: all 500ms ease;
-		opacity: 0;
-		visibility: hidden;
-	}
-	#btn-menu:checked ~ .container-menu{
-		opacity: 1;
-		visibility: visible;
-	}
-	.cont-menu{
-		width: 100%;
-		max-width: 250px;
-		background: #063a11;
-		height: 100vh;
-		position: relative;
-		transition: all 500ms ease;
-		transform: translateX(-100%);
-	}
-	#btn-menu:checked ~ .container-menu .cont-menu{
-		transform: translateX(0%);
-	}
-	.cont-menu nav{
-		transform: translateY(15%);
-	}
-	.cont-menu nav a{
-		display: block;
-		text-decoration: none;
-		padding: 20px;
-		color: #c7c7c7;
-		border-left: 5px solid transparent;
-		transition: all 400ms ease;
-	}
-	.cont-menu nav a:hover{
-		border-left: 5px solid #c7c7c7;
-		background: #000000;
-	}
-	.cont-menu label{
-		position: absolute;
-		right: 5px;
-		top: 10px;
-		color: #fff;
-		cursor: pointer;
-		font-size: 18px;
-	}
-	/*Fin de Menù lateral*/
-    main {
-        padding: 20px;
-        margin-top: 150px;
+.container-menu {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1001;
+}
+
+#btn-menu:checked ~ .container-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cont-menu {
+    width: 250px;
+    background: #063a11;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 500ms ease;
+    overflow: auto;
+}
+
+#btn-menu:checked ~ .container-menu .cont-menu {
+    transform: translateX(0);
+}
+
+.cont-menu nav {
+    margin-top: 60px; /* Ajusta el margen para que no cubra el encabezado */
+}
+
+.cont-menu nav a {
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+
+.cont-menu nav a:hover {
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+
+.cont-menu label {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Estilos generales para el contenido */
+body {
+    background: url(https://www.xtrafondos.com/wallpapers/montanas-con-nieve-en-el-bosque-3934.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding-top: 90px; /* Espacio para el encabezado fijo */
+}
+main {
+    padding: 20px;
+	margin-top: 0px;
+}
+
+
+/* Contenedor principal del contenido */
+.content-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos para la sección principal */
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.left,
+.right {
+    background-color: #2e2e2e;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para el título de contacto */
+.contactTitle {
+    margin-bottom: 25px;
+}
+
+.contactTitle h2 {
+    font-size: 28px;
+    color: #ddd;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.contactTitle h2::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    background-color: #888;
+    top: 100%;
+    left: 0;
+}
+
+.contactTitle h2::after {
+    content: '';
+    position: absolute;
+    width: 25%;
+    height: 3px;
+    background-color: dodgerblue;
+    top: calc(100% - 1px);
+    left: 0;
+}
+
+.contactTitle p {
+    font-size: 17px;
+    color: #ccc;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+/* Estilo para la información de contacto */
+.contactInfo {
+    margin-bottom: 30px;
+}
+
+.iconGroup {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.iconGroup .icon {
+    font-size: 24px;
+    color: dodgerblue;
+    margin-right: 15px;
+}
+
+.iconGroup .details {
+    color: #ddd;
+}
+
+.iconGroup .details span {
+    display: block;
+}
+
+.iconGroup .details span:first-child {
+    font-weight: bold;
+}
+
+/* Estilo para las redes sociales */
+.socialMedia {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.socialMedia a {
+    color: #ddd;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.socialMedia a:hover {
+    color: dodgerblue;
+}
+
+/* Estilos del formulario */
+.messageForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.messageForm .inputGroup {
+    position: relative;
+    width: 100%;
+}
+
+.messageForm .halfWidth {
+    flex: 1 1 calc(50% - 20px);
+}
+
+.messageForm .fullWidth {
+    flex: 1 1 100%;
+}
+
+.messageForm input,
+.messageForm textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #2e2e2e;
+    color: #ddd;
+    border: none;
+    border-radius: 4px;
+    border-bottom: 2px solid #666;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.messageForm textarea {
+    resize: vertical;
+    height: 200px;
+}
+
+.messageForm .inputGroup label {
+    position: absolute;
+    left: 10px;
+    bottom: 15px;
+    color: #888;
+    font-size: 16px;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.messageForm input:focus ~ label,
+.messageForm textarea:focus ~ label,
+.messageForm input:valid ~ label,
+.messageForm textarea:valid ~ label {
+    transform: translateY(-25px);
+    font-size: 14px;
+    color: dodgerblue;
+}
+
+.messageForm button {
+    padding: 12px 20px;
+    font-size: 18px;
+    background-color: dodgerblue;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.messageForm button:hover {
+    background-color: #1e1e1e;
+    color: dodgerblue;
+}
+
+/* Diseño adaptable */
+@media (max-width: 1100px) {
+    .messageForm .halfWidth {
+        flex-basis: 100%;
     }
-    .form {
-        background-color: #028f25;
-        width: 90%;
-        max-width: 400px;
-        margin: auto;
-        border-radius: 1rem;
-        padding: 3.5rem 1.5em;
-      }
-      .form_container {
+}
+
+@media (max-width: 900px) {
+    .row {
+        flex-direction: column;
+    }
+    
+    .left,
+    .right {
         width: 100%;
-        display: grid;
-        gap: 1em;
-        grid-auto-columns: 100%;
-      }
-      .form_title {
-        text-align: center;
-        font-size: 1.9rem;
-        margin-bottom: 0.4em;
-      }
-      .form_input {
-        font-family: inherit;
-        font-size: 1rem;
-        padding: 0.8em 1em;
-        outline: none;
-        border: none;
-        border: 1px solid #000000;
-        border-radius: 0.2em;
-      }
-      .form_input_message {
-        resize: none;
-        padding: 1.8em 1em;
-        margin-bottom: 0.5em;
-      }
-      .form_cta {
-        font-family: inherit;
-        background-color: #089fe0;
-        color: #ffffff;
-        border: none;
-        font-weight: 300;
-        font-size: 1rem;
-        padding: 0.7em 0;
-        border-radius: 0.2em;
-        cursor: pointer;
-        font-weight: 400;
-      }
-      @media (max-width 450px;){
-        .form {
-          padding: 3.5em 1em;
-        }
-      }  
+        margin: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .contactTitle h2 {
+        font-size: 24px;
+    }
+    
+    .contactTitle p {
+        font-size: 15px;
+    }
+    
+    .messageForm button {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+
+/* Estilos para el encabezado fijo */
+.header {
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    background-color: #035718;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.header .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .btn-menu label {
+    color: #ffffff;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.header .logo img {
+    width: 110px;
+    height: 110px;
+}
+
+.header .menu {
+    display: flex;
+    align-items: center;
+}
+
+.header .menu a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+ 

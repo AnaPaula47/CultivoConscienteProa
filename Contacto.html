@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <!-- Link To CSS Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="contacto.css">
+    <!-- Font Awesome Icons Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <!-- Link To Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,800;1,900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Contacto.css">
+    <link rel="icon" href="logo/campo.ico">
     <title>Contacto</title>
 </head>
 <body>
@@ -13,12 +18,12 @@
                 <label for="btn-menu">☰</label>
             </div>
             <div class="logo">
-                <img src="logo/7-Photoroom.png" alt="" width="110" height="110">
+                <img class="logo" src="logo/7-Photoroom.png" alt="" width="110" height="110">
             </div>
             <nav class="menu">
                 <a href="Inicio.html">Inicio</a>
                 <a href="Nosotros.html">Nosotros</a>
-                 <a href="catalogo.html">Catálogo</a>
+                <a href="catalogo.html">Catálogo</a>
                 <a href="Contacto.html">Contacto</a>
             </nav>
         </div>
@@ -28,25 +33,97 @@
     <div class="container-menu">
         <div class="cont-menu">
             <nav>
+                <a href="Agricultura.html">Agricultura</a>
                 <a href="Huerta.html">Huerta</a>
-                <a href="calendario.html">Calendario</a>
                 <a href="semillas.html">Planes</a>
-                <a href="Noticias.html">Noticias</a>
+                <a href="calendario.html">Calendario</a>
             </nav>
             <label for="btn-menu">✖️</label>
         </div>
-    </div>  
-    </header>
-    <main>
-        <form class="form" action="https://formspree.io/f/moqgkawq" method="POST">
-            <div class="form_container">
-              <h2 class="form_title">Contactanos</h2>
-              <input type="text" class="form_input" placeholder="Nombre" name="name"/>
-              <input type="Email" class="form_input" placeholder="Email" name="email">
-              <textarea class="form_input form_input--message" placeholder="Mensaje" name="message"></textarea>
-              <input type="submit" value="Enviar" class="form_cta" />
-            </div>
-          </form>
-    </main>
+    </div>
+<main>
+    <div class="content-container">
+        <main class="row">
+            <!-- Left Section (Column) Starts -->
+            <section class="col left">
+                <!-- Title Starts -->
+                <div class="contactTitle">
+                    <h2>Póngase en contacto</h2>
+                    <p>Estamos aquí para ayudarte a mejorar tu producción agrícola. Nuestro equipo de expertos está listo para responder tus preguntas y ofrecerte soluciones personalizadas. ¡Contáctanos hoy mismo!</p>
+                </div>
+                <!-- Title Ends -->
+                <!-- Contact Info Starts -->
+                <div class="contactInfo">
+                    <div class="iconGroup">
+                        <div class="icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="details">
+                            <span>Telefono</span>
+                            <span>+54 9 3576 478798</span>
+                        </div>
+                    </div>
+                    <div class="iconGroup">
+                        <div class="icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="details">
+                            <span>Email</span>
+                            <span>CultivoConscienteProa@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="iconGroup">
+                        <div class="icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="details">
+                            <span>Localizacion</span>
+                            <span>Transito,Cordoba,Argentina</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact Info Ends -->
+                <!-- Social Media Starts -->
+                <div class="socialMedia">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <!-- Social Media Ends -->
+            </section>
+            <!-- Left Section (Column) Ends -->
+            <!-- Right Section (Column) Starts -->
+            <section class="col right">
+                <!-- Form Starts -->
+                <div class="formContainer">
+                    <form class="messageForm">
+                        <div class="inputGroup halfWidth">
+                            <input type="text" name="name" required="required">
+                            <label>Nombre</label>
+                        </div>
+                        <div class="inputGroup halfWidth">
+                            <input type="email" name="email" required="required">
+                            <label>Email</label>
+                        </div>
+                        <div class="inputGroup fullWidth">
+                            <input type="text" name="subject" required="required">
+                            <label>Asunto</label>
+                        </div>
+                        <div class="inputGroup fullWidth">
+                            <textarea name="message" required="required"></textarea>
+                            <label>Escribe algo</label>
+                        </div>
+                        <div class="inputGroup fullWidth">
+                            <button type="submit">Enviar Mensaje</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Form Ends -->
+            </section>
+            <!-- Right Section (Column) Ends -->
+        </main>
+    </div>
+</main>
 </body>
 </html>

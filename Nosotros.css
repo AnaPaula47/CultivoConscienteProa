@@ -38,26 +38,31 @@
 		line-height:100px;
 		
 	}
-	.container .btn-menu label{
-		color: #000000;
+	.container .btn-menu label {
+		color: #ffffff;
 		font-size: 25px;
 		cursor: pointer;
 	}
-	.logo {
-		padding: 0px;
-		margin-bottom: 1px;
+	
+	.logo img {
+		color: #000000;
+		align-items: center;
+		font-weight: 400;
+		font-size: 22px;
+		margin-left: 10px;
 	}
 	
-	.container .menu{
+	.container .menu {
 		float: right;
 		line-height: 100px;
 	}
-	.container .menu a{
+	
+	.container .menu a {
 		display: inline-block;
 		padding: 15px;
 		line-height: normal;
 		text-decoration: none;
-		color: #000000;
+		color: #ffffff;
 		transition: all 0.3s ease;
 		border-bottom: 2px solid transparent;
 		font-size: 15px;
