@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cultivo Consciente</title>
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="Inicio.css">
     <link rel="icon" href="logo/campo.ico">
-    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
 </head>
 <body>
     <header class="header">
@@ -20,7 +20,7 @@
             <nav class="menu">
                 <a href="Inicio.html">Inicio</a>
                 <a href="Nosotros.html">Nosotros</a>
-                 <a href="catalogo.html">Catálogo</a>
+                <a href="catalogo.html">Catálogo</a>
                 <a href="Contacto.html">Contacto</a>
             </nav>
         </div>
@@ -37,57 +37,62 @@
             </nav>
             <label for="btn-menu">✖️</label>
         </div>
-    </div> 
+    </div>
     <div class="imagenes">
         <div class="slide">
             <div class="item" style="background-image: url(foto/vista-fotorrealista-mujer-cosechando-jardin-ecologico-sostenible_23-2151462930.jpg);">
                 <div class="content">
                     <div class="name">Nosotros</div>
                     <div class="des">Somos una empresa dedicada a la agricultura sostenible, comprometida con el medio ambiente y la producción de alimentos saludables</div>
-                    <button><a href="Nosotros.html">Leer mas</a></button>
+                    <button><a href="Nosotros.html">Leer más</a></button>
                 </div>
             </div>
             <div class="item" style="background-image: url(foto/comunidad-personas-que-trabajan-juntas-agricultura-cultivar-alimentos_23-2151205705.jpg);">
                 <div class="content">
-                    <div class="name">catalogo</div>
-                    <div class="des">Este es el catalogo donde se encuentran todo tipo de Cultivo</div>
-                    <button><a href="catalogo.html">Leer mas</a></button>
+                    <div class="name" >Catálogo</div>
+                    <div class="des" id="catalogoId">
+                        <script>
+                            let nombre = prompt ("¿Cual es tu nombre?");
+                            document.getElementById("catalogoId").innerHTML = `Hola, ${nombre}. Te presentamos el catalogo.`;
+                        </script>
+                    </div>
+                    <button><a href="catalogo.html">Leer más</a></button>
                 </div>
             </div>
             <div class="item" style="background-image: url(foto/jardin.jpg);">
                 <div class="content">
                     <div class="name">Huerta en casa</div>
-                    <div class="des">Todo lo que debas saber de como crear una huerta casera para tu casa</div>
-                    <button><a href="Huerta.html">leer mas</a></button>
+                    <div class="des">Todo lo que debas saber de cómo crear una huerta casera para tu casa</div>
+                    <button><a href="Huerta.html">Leer más</a></button>
                 </div>
             </div>
             <div class="item" style="background-image: url(foto/familia-jardin-plantando-vegetacion-juntos_23-2151205725.jpg);">
                 <div class="content">
-                    <div class="name">Cosechando Para Mi Familia:La Huerta en tu Hogar</div>
+                    <div class="name">Cosechando Para Mi Familia: La Huerta en tu Hogar</div>
                     <div class="des">El Programa Cosechando para mi Familia, la Huerta en Tu Hogar, es una iniciativa del Ministerio de Agricultura y Ganadería</div>
-                    <button><a href="semillas.html">Leer mas</a></button>
+                    <button><a href="semillas.html">Leer más</a></button>
                 </div>
             </div>
             <div class="item" style="background-image: url(foto/mujer-influyente-tamano-mediano_23-2151414170.jpg);">
                 <div class="content">
-                    <div class="name">Agricultura</div>
-                    <div class="des">Esta página está diseñada para proporcionar a los agricultores, estudiantes y entusiastas de la agricultura la información y los recursos necesarios para mejorar sus prácticas y contribuir a un futuro más sostenible.</div>
-                    <button><a href="Agricultura.html">Leer mas</a></button>
+                    <div class="name">Noticias</div>
+                    <div class="des">Las últimas noticias del mundo agrícola</div>
+                    <button><a href="Noticias.html">Leer más</a></button>
                 </div>
             </div>
             <div class="item" style="background-image: url(foto/hombre-africano-cosechando-verduras_23-2151441246.jpg);">
                 <div class="content">
                     <div class="name">Cosechas</div>
                     <div class="des">Calendario de Cosechas</div>
-                    <button><a href="calendario.html">Leer mas</a></button>
+                    <button><a href="calendario.html">Leer más</a></button>
                 </div>
             </div>
         </div>
         <div class="button">
             <button class="prev"><i class='bx bx-left-arrow-alt'></i></button>
-            <button class="next"><i class='bx bx-right-arrow-alt' ></i></button>
+            <button class="next"><i class='bx bx-right-arrow-alt'></i></button>
         </div>
     </div>
-    <script src="Inicio.js"></script>  
+    <script src="inicio.js"></script>  
 </body>
 </html>
